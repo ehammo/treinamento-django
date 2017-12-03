@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body_content %}
+<h1>Nome: {{Editora.nome}}</h1>
+<h2><a href="{% url 'index' %}"> Index</a></h2>
+
+{% for livro in Livros %}
+    <h3>Titulo:</h3>{{livro.titulo}}
+{% endfor %}
+
+{% endblock %}
