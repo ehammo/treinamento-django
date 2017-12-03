@@ -17,6 +17,3 @@ class Editora(models.Model):
 
     def __str__(self):
         return self.nome
-
-class User(AbstractUser):
-    pass
