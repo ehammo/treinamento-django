@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body_content %}
+<h1>Livros</h1>
+<h2><a href="{% url 'index' %}"> Index</a></h2>
+
+{% if Livros == None %}
+    <h2>Não tem livros cadastrados :( </h2>
+{% else %}
+    {% for livro in Livros %}
+        <h3>Titulo: {{livro.titulo}}</h3>
+        <h3>Editora:
+            <a href="{% url 'editora' livro.editora.id %}">{{livro.editora}}</a>
+        </h3>
+    {% endfor %}
+{% endif %}
+{% endblock %}
