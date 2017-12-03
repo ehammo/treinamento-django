@@ -20,5 +20,7 @@ from core.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^$', index, name='index'),
+    url(r'^livros/$', livros, name='livros'),
+    url(r'^editora/(?P<editoraId>\d+)$', editora, name='editora'),
 
 ]
